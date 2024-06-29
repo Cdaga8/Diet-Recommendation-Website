@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+    <link rel="shortcut icon" type="image/png" href="{% static 'favicon.png' %}"/>
+    <title>{% block title %}{% endblock %}</title>
+    <style>
+      {% block css %} {% endblock %}
+    </style>
+  </head>
+  <body>
+  {% block body %} {% endblock %}
+    {% block js %} {% endblock %}
+    </body>
+</html>

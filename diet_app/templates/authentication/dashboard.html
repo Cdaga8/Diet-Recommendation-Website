@@ -1,0 +1,47 @@
+<!-- dashboard.html -->
+{% extends "basic.html" %}
+{% load static %}
+{% block title %}
+Dashboard
+{% endblock %}
+<head>
+    <link rel="stylesheet" href="{% static 'myapp/styles.css' %}">
+</head>
+{% block body %}
+    <h1>Dashboard</h1>
+    <form id="dashboard-form" method="POST" action="{% url 'dashboard' %}">
+        {% csrf_token %}
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" required><br><br>
+        <label for="gender">Gender:</label>
+        <select id="gender" name="gender" required>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+        </select><br><br>
+        <label for="weight">Weight (kg):</label>
+        <input type="number" id="weight" name="weight" required><br><br>
+        <label for="height">Height (cm):</label>
+        <input type="number" id="height" name="height" required><br><br>
+        <label for="dietary_preferences">Dietary Preferences:</label>
+        <select id="dietary_preferences" name="dietary_preferences">
+            <option value="True">Vegetarian</option>
+            <option value="False">Non-Vegetarian</option>
+        </select><br><br>
+        <label for="allergies">Allergies:</label>
+        <input type="text" id="allergies" name="allergies"><br><br>
+        <label for="health_goals">Health Goals:</label>
+        <select id="health_goals" name="health_goals">
+            <option value="WeightLoss">Weight Loss</option>
+            <option value="WeightGain">Weight Gain</option>
+            <option value="Maintain-Weight">Maintain Weight</option>
+        </select><br><br>
+        <label for="Activity">Daily Activity</label>
+        <select id="activity" name="activity">
+            <option value="A1">Activity1</option>
+            <option value="A2">Activity2</option>
+            <option value="3">Activity3</option>
+            <option value="4">Activity4</option>
+        </select><br><br>
+        <button type="submit">Submit</button>
+    </form>
+{% endblock %}

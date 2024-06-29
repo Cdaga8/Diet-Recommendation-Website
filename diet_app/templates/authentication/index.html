@@ -1,0 +1,14 @@
+{% extends "basic.html" %}
+{% load static %}
+{% block title %}
+Diet Planner
+{% endblock %}
+{% block body %}
+<div style="background:{%static 'home.jpg'%};">
+    <h1>Diet Recommendation System</h1>
+    <div class="links">
+        <a href="{% url 'signup' %}" class="button">Sign Up</a>
+        <a href="{% url 'signin' %}" class="button">Sign In</a>
+    </div>
+</div>
+{% endblock %}

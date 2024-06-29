@@ -1,0 +1,18 @@
+<!-- dailyDiet.html -->
+{% extends "basic.html" %}
+{% load static %}
+{% block title %}
+Diet Plan
+{% endblock %}
+<head>
+    <link rel="stylesheet" href="{% static '/styles.css' %}">
+</head>
+{% block body %}
+Breakfast: {{breakfast}}<br><br>
+
+Lunch: {{lunch}}<br><br>
+
+Snacks: {{snacks}}<br><br>
+
+Dinner: {{dinner}}<br><br>
+{% endblock %}
